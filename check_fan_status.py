@@ -12,6 +12,7 @@ fan_status = GPIO.input(FAN_PIN)
 
 if fan_status == GPIO.HIGH:
     print("Fan is ON")
+    GPIO.output(FAN_PIN, GPIO.LOW)  # Turn the fan off
 else:
     print("Fan is OFF")
 
