@@ -1,4 +1,3 @@
-from time import sleep
 import RPi.GPIO as GPIO
 
 # Configuration
@@ -13,10 +12,8 @@ fan_status = GPIO.input(FAN_PIN)
 
 if fan_status == GPIO.HIGH:
     print("Fan is ON")
-    GPIO.output(FAN_PIN, GPIO.LOW)  # Turn the fan off
 else:
     print("Fan is OFF")
 
 # Clean up GPIO
-sleep(5)
 GPIO.cleanup()
