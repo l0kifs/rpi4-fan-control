@@ -1,3 +1,4 @@
+from time import sleep
 import RPi.GPIO as GPIO
 
 # Configuration
@@ -17,4 +18,5 @@ else:
     print("Fan is OFF")
 
 # Clean up GPIO
+sleep(5)
 GPIO.cleanup()
